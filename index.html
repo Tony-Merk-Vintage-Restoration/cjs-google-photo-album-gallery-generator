@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+
+        <title>CJ&apos;s Google Photo Album Gallery Generator</title>
+    </head>
+    <body>
+        <h1>Generate Gallery from Google Photos Album</h1>
+        <h3>
+            <label for="google-photos-share-link"
+                >Google Photos album link</label
+            >
+        </h3>
+        <form id="outer-generate-input-form">
+            <input
+                type="url"
+                id="google-photos-share-link"
+                placeholder="https://photos.app.goo.gl/Sk7BTMekT5yeUbh18"
+                size="40"
+            />
+            <button type="submit">Generate!</button>
+        </form>
+        <hr />
+        <h3><label for="generated-code-output">Output</label></h3>
+        <textarea rows="10" cols="40" id="generated-code-output"></textarea>
+
+        <script src="./index.js"></script>
+    </body>
+</html>
