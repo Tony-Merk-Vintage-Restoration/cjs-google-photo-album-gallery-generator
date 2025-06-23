@@ -48,6 +48,10 @@
             <li>
                 The output ready to copy-paste will be in the second textarea
             </li>
+            <li>
+                There is almost no reason whatsoever not to minify the output,
+                but the option is there regardless
+            </li>
         </ul>
         <form id="outer-generate-input-form">
             <h3>
@@ -56,6 +60,9 @@
                 >
             </h3>
             <textarea rows="12" cols="80" id="input-embed-code"></textarea>
+            <br />
+            <input type="checkbox" id="minify-output-checkbox" checked />
+            <label for="minify-output-checkbox">Minify Output</label>
             <br />
             <input type="submit" value="Generate!" />
         </form>
@@ -67,7 +74,9 @@
             id="generated-code-output"
             readonly
         ></textarea>
+        <hr />
 
+        <script src="./htmlminifier.min.js"></script>
         <script src="./index.js"></script>
     </body>
 </html>
