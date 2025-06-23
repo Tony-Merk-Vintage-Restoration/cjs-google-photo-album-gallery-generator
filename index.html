@@ -4,26 +4,69 @@
         <meta charset="UTF-8" />
 
         <title>CJ&apos;s Google Photo Album Gallery Generator</title>
+
+        <style>
+            textarea {
+                white-space: pre;
+                overflow-wrap: normal;
+                overflow-x: scroll;
+            }
+        </style>
     </head>
     <body>
         <h1>Generate Gallery from Google Photos Album</h1>
-        <h3>
-            <label for="google-photos-share-link"
-                >Google Photos album link</label
-            >
-        </h3>
+        <p>Instructions:</p>
+        <ul>
+            <li>
+                Visit
+                <a
+                    href="https://www.publicalbum.org/blog/embedding-google-photos-albums"
+                    title="Publicalbum.org Google Photos Embed Generator"
+                    target="_blank"
+                    >Publicalbum.org</a
+                >
+                to generate the embedded image list
+                <ul>
+                    <li>
+                        Scroll down to the
+                        <i><b>2) Create code to embed album</b></i> section
+                    </li>
+                    <li>
+                        Paste the Google Photos Album public share link and
+                        click <b>Create Embed Code</b>
+                    </li>
+                    <li>
+                        Follow the directions there, then copy the output embed
+                        code provided.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Paste that embed code into the first textarea here and click
+                "Convert"
+            </li>
+            <li>
+                The output ready to copy-paste will be in the second textarea
+            </li>
+        </ul>
         <form id="outer-generate-input-form">
-            <input
-                type="url"
-                id="google-photos-share-link"
-                placeholder="https://photos.app.goo.gl/Sk7BTMekT5yeUbh18"
-                size="40"
-            />
-            <button type="submit">Generate!</button>
+            <h3>
+                <label for="input-embed-code"
+                    >Generated Publicalbum Embed Code</label
+                >
+            </h3>
+            <textarea rows="12" cols="80" id="input-embed-code"></textarea>
+            <br />
+            <input type="submit" value="Generate!" />
         </form>
         <hr />
-        <h3><label for="generated-code-output">Output</label></h3>
-        <textarea rows="10" cols="40" id="generated-code-output"></textarea>
+        <h3><label for="generated-code-output">Output Embed Code</label></h3>
+        <textarea
+            rows="12"
+            cols="80"
+            id="generated-code-output"
+            readonly
+        ></textarea>
 
         <script src="./index.js"></script>
     </body>
